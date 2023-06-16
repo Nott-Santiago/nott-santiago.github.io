@@ -8,7 +8,6 @@ async function getDatos(){
         const response = await fetch(nasa_ruta);
         const results = await response.json();
         showResultados(results);
-        console.log(results);
       } catch (error) {
         console.error('Error al obtener los datos:', error);
       }
@@ -38,4 +37,6 @@ function showResultados({title, media_type, url, explanation, date}){
     const anio = fechaObtenida.getFullYear();
     const fechaFormateada = `${diaSemana} ${dia} de ${mes} del ${anio}`;
     fecha.innerHTML = fechaFormateada;
+    console.log(fechaObtenida);
+    console.log(fechaFormateada);
 }
