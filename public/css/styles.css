@@ -1,0 +1,33 @@
+
+.background-image {
+    background-image: url('/public/images/fondo5.png');
+    background-attachment: fixed;
+}  
+.textoPer{
+    
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9); /* Agrega sombra al texto */
+    padding: 5px;
+}
+main {
+    margin-top: 80px; /* Ajusta este valor según sea necesario */
+}
+p{
+    color: #ffffff;
+}
+h1{
+    font-family: 'Geologica', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+h2{
+    color: #ffffff;
+}
+h4{
+    font-family: 'Amatic SC', cursive;
+    color: #ffffff;
+}
+.img-dia{
+    height: 90vh;
+    border-radius: 5px;
+    box-shadow: 1px 3px 2px 1px rgba(0, 0, 0, 0.12);
+}
