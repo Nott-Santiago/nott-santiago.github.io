@@ -1,33 +1,63 @@
-
+/*
 .background-image {
     background-image: url('/public/images/fondo5.png');
     background-attachment: fixed;
-}  
+}  */
+body{
+    
+    background-image: linear-gradient(to top, rgba(218, 212, 236, 0.057) 0%, rgba(218, 212, 236, 0.066) 1%, rgba(243, 231, 233, 0.167) 100%), url(../images/fondo_luna2.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 .textoPer{
     
-    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.9); /* Agrega sombra al texto */
+    text-shadow: 8px 8px 8px rgba(57, 210, 244, 0.756); /* Agrega sombra al texto */
     padding: 5px;
 }
 main {
     margin-top: 80px; /* Ajusta este valor según sea necesario */
 }
+
+.menu{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: #c3e0f8;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius:5px;
+    box-shadow: 0 0 6px rgba(red, green, blue, alpha);
+}
 p{
-    color: #ffffff;
+    padding: 5px;
+    color: #000000;
+    text-shadow: 2px 3px 3px rgba(26, 171, 223, 0.441);
 }
 h1{
     font-family: 'Geologica', sans-serif;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #0d4571;
+    text-shadow: 2px 2px 3px rgba(63, 185, 250, 0.285);
 }
 h2{
-    color: #ffffff;
+    color: #000000;
 }
 h4{
     font-family: 'Amatic SC', cursive;
-    color: #ffffff;
+    color: #051f3b;
+    text-shadow: 2px 2px 2px rgba(160, 218, 235, 0.514);
 }
 .img-dia{
     height: 90vh;
     border-radius: 5px;
     box-shadow: 1px 3px 2px 1px rgba(0, 0, 0, 0.12);
+}
+.btn_ver{
+    margin-top: 3px;
+    color: #052f4f;
+    background-color: #838d95;
 }

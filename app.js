@@ -20,15 +20,26 @@ function showResultados({title, media_type, url, explanation, date}){
     
     const multimedia = document.querySelector('#multimedia');
     if(media_type == 'video'){
-        multimedia.innerHTML = `
-        <iframe class="embed-responsive-item" src="${url}"></iframe`;
+      multimedia.innerHTML = `
+      <iframe class="embed-responsive-item" src="${url}"></iframe`;
     }else{
-        multimedia.innerHTML = `
-        <img class="img-fluid img-dia" src="${url}" alt="${url}">`;
+      multimedia.innerHTML = `
+      <img class="img-fluid img-dia" src="${url}" alt="${url}">`;
+
+          // Agregar botón de descarga
+        const botonDescargar = document.createElement('button');
+        botonDescargar.innerText = 'Ver imagen';
+        botonDescargar.classList.add('btn_ver');
+        botonDescargar.addEventListener('click', () => {
+            descargarImagen(url, title);
+        });
+        multimedia.appendChild(botonDescargar);
+
     }
+    
     const explicacion = document.querySelector('#explicacion');
     explicacion.innerHTML = explanation;
-
+  
     const fecha = document.querySelector('#fecha');
     const fechaObtenida = new Date(date);
     const diaSemana = fechaObtenida.toLocaleString('es-ES', { weekday: 'long' });
@@ -37,6 +48,15 @@ function showResultados({title, media_type, url, explanation, date}){
     const anio = fechaObtenida.getFullYear();
     const fechaFormateada = `${diaSemana} ${dia} de ${mes} del ${anio}`;
     fecha.innerHTML = fechaFormateada;
-    console.log(fechaObtenida);
-    console.log(fechaFormateada);
-}
+
+  }
+  
+  function descargarImagen(url, title) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = title;
+    link.target = '_blank';
+
+    link.click();
+  }
+  
