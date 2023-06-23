@@ -16,7 +16,7 @@ async function getDatos(){
 
 function showResultados({title, media_type, url, explanation, date}){
     const titulo = document.querySelector('#titulo');
-    titulo.innerHTML = 'W'+title;
+    titulo.innerHTML = title;
     
     const multimedia = document.querySelector('#multimedia');
     if(media_type == 'video'){
