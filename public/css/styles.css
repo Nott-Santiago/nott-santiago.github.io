@@ -56,8 +56,18 @@ h4{
     border-radius: 5px;
     box-shadow: 1px 3px 2px 1px rgba(0, 0, 0, 0.12);
 }
-.btn_ver{
-    margin-top: 3px;
-    color: #052f4f;
-    background-color: #838d95;
+
+.btn {
+    cursor: pointer;
+    color: rgba(62, 91, 111, 0.712);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    
+    background-color: rgba(157, 184, 194, 0.258);
+}
+.inp{
+    cursor: pointer;
+    background-color: rgba(95, 117, 125, 0.413);
+}
+.formularioD{
+    align-items: center;
 }
